@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">android_whatsapp</string>
+    <string name="login_etUsername">Username</string>
+    <string name="login_etPassword">Password</string>
+    <string name="login_btnLogin">Login</string>
+    <string name="login_title">Login Whatsapp</string>
+    <string name="login_registerLink">not registered? click here to register</string>
+    <string name="register_title">Register Whatsapp</string>
+    <string name="register_etUsername">Username</string>
+    <string name="register_etPassword">Password</string>
+    <string name="login_etSecondPassword">Confirm Password</string>
+    <string name="register_etSecondPassword">Confirm Password</string>
+    <string name="register_etDisplayName">Display Name</string>
+    <string name="register_loginLink">Allready registered? click here to login</string>
+    <string name="register_btnRegister">Register</string>
+
+</resources>

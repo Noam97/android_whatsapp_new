@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".register"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="409dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        tools:ignore="MissingConstraints"
+        android:layout_gravity="center"
+        android:layout_height="850dp"
+        android:background="@drawable/background">>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="50dp"
+                android:text="@string/register_title"
+                android:textColor="@color/dark_green"
+                android:textSize="34sp" />
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:srcCompat="@drawable/phone_logo" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName"
+                android:layout_width="360dp"
+                android:layout_height="50dp"
+                android:ems="10"
+                android:hint="@string/register_etUsername"
+                android:inputType="textPersonName"
+                android:padding="5dp"/>
+
+            <EditText
+                android:id="@+id/editTextTextPassword"
+                android:layout_width="360dp"
+                android:layout_height="50dp"
+                android:ems="10"
+                android:hint="@string/register_etPassword"
+                android:inputType="textPassword"
+                android:padding="5dp"
+                />
+
+            <EditText
+                android:layout_width="360dp"
+                android:layout_height="50dp"
+                android:ems="10"
+                android:hint="@string/register_etSecondPassword"
+                android:inputType="textPassword"
+                android:padding="5dp"
+                />
+
+            <EditText
+                android:layout_width="360dp"
+                android:layout_height="50dp"
+                android:ems="10"
+                android:hint="@string/register_etDisplayName"
+                android:inputType="textPassword"
+                android:padding="5dp"
+                />
+
+            <TextView
+                android:id="@+id/register_loginLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/register_loginLink"
+                android:padding="15pt"/>
+
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/register_btnRegister"
+                tools:layout_editor_absoluteX="1dp"
+                tools:layout_editor_absoluteY="1dp"
+                android:background="@drawable/button"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
