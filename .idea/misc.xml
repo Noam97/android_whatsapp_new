@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.1" />
         <entry key="..\:/Users/Noam Lahmani/AndroidStudioProjects/android_whatsapp2/app/src/main/res/drawable/background.xml" value="0.112" />
         <entry key="..\:/Users/Noam Lahmani/AndroidStudioProjects/android_whatsapp2/app/src/main/res/drawable/button.xml" value="0.112" />
         <entry key="..\:/Users/Noam Lahmani/AndroidStudioProjects/android_whatsapp2/app/src/main/res/drawable/ic_add.xml" value="0.112" />
@@ -11,6 +12,11 @@
         <entry key="..\:/Users/Noam Lahmani/AndroidStudioProjects/android_whatsapp2/app/src/main/res/layout/activity_form.xml" value="0.11302083333333333" />
         <entry key="..\:/Users/Noam Lahmani/AndroidStudioProjects/android_whatsapp2/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/Noam Lahmani/AndroidStudioProjects/android_whatsapp2/app/src/main/res/layout/activity_register.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_contacts_list.xml" value="0.16802536231884058" />
+        <entry key="app/src/main/res/layout/activity_form.xml" value="0.16802536231884058" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.16802536231884058" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.16802536231884058" />
+        <entry key="app/src/main/res/xml/network_security_config.xml" value="0.1" />
       </map>
     </option>
   </component>

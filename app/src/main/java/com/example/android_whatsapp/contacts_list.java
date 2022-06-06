@@ -8,6 +8,8 @@ import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
+import com.example.android_whatsapp.API.ContactsAPI;
+import com.example.android_whatsapp.API.UsersAPI;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -22,6 +24,7 @@ public class contacts_list extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Intent intent = getIntent();
         setContentView(R.layout.activity_contacts_list);
         db = Room.databaseBuilder(getApplicationContext(), AppDB.class, "PostDB").allowMainThreadQueries().build();
         postDao= db.postDao();
@@ -31,6 +34,14 @@ public class contacts_list extends AppCompatActivity {
             Intent i = new Intent(this, form.class);
             startActivity(i);
         });
+
+        String token = intent.getStringExtra("jwtToken");
+        String userId = intent.getStringExtra("userId");
+
+        ContactsAPI api = new ContactsAPI();
+        api.getAllContacts(token);
+
+
 
         posts= new ArrayList<>();
 
