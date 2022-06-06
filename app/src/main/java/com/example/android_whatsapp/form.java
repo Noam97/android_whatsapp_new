@@ -20,8 +20,8 @@ public class form extends AppCompatActivity {
         Button btnSaveNewContact = findViewById(R.id.btnSaveNewContact);
         btnSaveNewContact.setOnClickListener(view -> {
             EditText etItem = findViewById(R.id.etItem);
-            Post post = new Post(0,   etItem.getText().toString());
-            postDao.insert(post);
+            Contact contact = new Contact(0,   etItem.getText().toString());
+            postDao.insert(contact);
             finish();
 
         });

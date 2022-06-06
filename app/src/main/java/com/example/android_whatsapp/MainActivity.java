@@ -62,10 +62,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
                 System.out.println(response.body());
-                i.putExtra("jwtToken", response.body());
-                i.putExtra("userId", userName.toString());
-                startActivity(i);
-                Log.i("mainActivity", "");
+                if(response.isSuccessful()) {
+
+                    i.putExtra("jwtToken", response.body());
+                    i.putExtra("userId", userName.toString());
+                    startActivity(i);
+                    Log.i("mainActivity", "");
+                }
+                else {
+                    //
+                }
             }
             @Override
             public void onFailure(Call<String> call, Throwable t) {

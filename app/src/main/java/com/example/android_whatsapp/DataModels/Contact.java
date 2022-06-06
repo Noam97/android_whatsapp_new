@@ -14,4 +14,8 @@ public class Contact {
         this.last = last;
         this.lastdate = lastdate;
     }
+
+    public String getName() {
+        return name;
+    }
 }

@@ -10,17 +10,17 @@ import java.util.List;
 
 @Dao
 public interface PostDao {
-    @Query("SELECT * FROM post")
-    List<Post> index();
-    @Query("SELECT * FROM post WHERE id= :id")
-    Post get(int id);
+    @Query("SELECT * FROM Contact")
+    List<Contact> index();
+    @Query("SELECT * FROM Contact WHERE contact= :contact")
+    Contact get(String contact);
 
     @Insert
-    void insert(Post... posts);
+    void insert(Contact... contacts);
 
     @Update
-    void update(Post... posts);
+    void update(Contact... contacts);
 
     @Delete
-    void delete(Post... posts);
+    void delete(Contact... contacts);
 }

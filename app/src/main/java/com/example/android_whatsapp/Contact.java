@@ -3,7 +3,7 @@ package com.example.android_whatsapp;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 @Entity
-public class Post {
+public class Contact {
     @PrimaryKey(autoGenerate=true)
     private int id;
     private String contact;
@@ -24,12 +24,12 @@ public class Post {
         this.contact = contact;
     }
 
-    public Post(int id, String contact) {
+    public Contact(int id, String contact) {
         this.id = id;
         this.contact = contact;
     }
 
-    public Post() {
+    public Contact() {
     }
 
     @Override
