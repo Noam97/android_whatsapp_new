@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
     private AppDB db;
-    private PostDao postDao;
+    private ContactDao postDao;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         db = Room.databaseBuilder(getApplicationContext(), AppDB.class, "PostDB").allowMainThreadQueries().build();
-        postDao= db.postDao();
+        postDao= db.contactDao();
         TextView login_registerLink = findViewById(R.id.login_registerLink);
         login_registerLink.setOnClickListener(v -> {
             Intent i = new Intent(this, register.class);

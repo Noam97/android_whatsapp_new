@@ -9,7 +9,7 @@ import androidx.room.Update;
 import java.util.List;
 
 @Dao
-public interface PostDao {
+public interface ContactDao {
     @Query("SELECT * FROM Contact")
     List<Contact> index();
     @Query("SELECT * FROM Contact WHERE contact= :contact")
