@@ -46,6 +46,13 @@ public class contacts_list extends AppCompatActivity {
             startActivity(i);
         });
 
+        FloatingActionButton btnSettings = findViewById(R.id.settings);
+        btnSettings.setOnClickListener(view -> {
+            Intent i = new Intent(this, settingsPanel.class);
+            startActivity(i);
+        });
+
+
         contactsList= new ArrayList<>();
 
         ListView contacts = findViewById(R.id.contacts);
@@ -54,7 +61,7 @@ public class contacts_list extends AppCompatActivity {
                 contactsList);
         contacts.setAdapter(adapter);
 
-        api = new ContactsAPI();
+        api = new ContactsAPI(this);
         getAllContacts(token);
     }
 

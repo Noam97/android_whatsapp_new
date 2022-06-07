@@ -28,7 +28,7 @@ public class form extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form);
         Intent intent = getIntent();
-        api = new ContactsAPI();
+        api = new ContactsAPI(this);
 
         db = Room.databaseBuilder(getApplicationContext(),
                 AppDB.class,

@@ -1,6 +1,7 @@
 package com.example.android_whatsapp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -8,6 +9,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.preference.PreferenceManager;
 import androidx.room.Room;
 
 import com.example.android_whatsapp.API.UsersAPI;
@@ -30,6 +32,13 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor prefEditor = prefs.edit();
+        prefEditor.putString("serverUrl", this.getResources().getString(R.string.server));
+        prefEditor.commit();
+
+        System.out.println(prefs.getString("serverUrl", ""));
+
         db = Room.databaseBuilder(getApplicationContext(), AppDB.class, "PostDB").allowMainThreadQueries().build();
         postDao= db.contactDao();
         TextView login_registerLink = findViewById(R.id.login_registerLink);
@@ -48,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
             EditText username = findViewById(R.id.editTextTextPersonName);
             EditText password = findViewById(R.id.editTextTextPassword);
 
-            UsersAPI api = new UsersAPI();
+            UsersAPI api = new UsersAPI(this);
             auth(i, api, username.getText().toString(), password.getText().toString());
         });
     }
