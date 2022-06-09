@@ -12,16 +12,17 @@
         <entry key="..\:/Users/Noam Lahmani/AndroidStudioProjects/android_whatsapp2/app/src/main/res/layout/activity_form.xml" value="0.11302083333333333" />
         <entry key="..\:/Users/Noam Lahmani/AndroidStudioProjects/android_whatsapp2/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/Noam Lahmani/AndroidStudioProjects/android_whatsapp2/app/src/main/res/layout/activity_register.xml" value="0.1" />
-        <entry key="app/src/main/res/drawable-anydpi/ic_add.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_add_contact.xml" value="0.13229166666666667" />
-        <entry key="app/src/main/res/layout/activity_contacts_list.xml" value="0.3248021443684896" />
+        <entry key="..\:/Users/Noam Lahmani/AndroidStudioProjects/android_whatsapp_new/app/src/main/res/layout/activity_add_contact.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Noam Lahmani/AndroidStudioProjects/android_whatsapp_new/app/src/main/res/layout/activity_contacts_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Noam Lahmani/AndroidStudioProjects/android_whatsapp_new/app/src/main/res/layout/activity_form.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Noam Lahmani/AndroidStudioProjects/android_whatsapp_new/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Noam Lahmani/AndroidStudioProjects/android_whatsapp_new/app/src/main/res/layout/activity_register.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Noam Lahmani/AndroidStudioProjects/android_whatsapp_new/app/src/main/res/layout/settings_activity.xml" value="0.25416666666666665" />
+        <entry key="app/src/main/res/layout/activity_contacts_list.xml" value="0.16802536231884058" />
         <entry key="app/src/main/res/layout/activity_form.xml" value="0.16802536231884058" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.16802536231884058" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.16802536231884058" />
-        <entry key="app/src/main/res/layout/activity_settings.xml" value="0.16077898550724637" />
-        <entry key="app/src/main/res/layout/settings_activity.xml" value="0.16077898550724637" />
         <entry key="app/src/main/res/xml/network_security_config.xml" value="0.1" />
-        <entry key="app/src/main/res/xml/root_preferences.xml" value="0.16077898550724637" />
       </map>
     </option>
   </component>
