@@ -8,29 +8,30 @@
     android:background="@drawable/background">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_width="409dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="405dp">
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        tools:ignore="MissingConstraints"
+        android:layout_gravity="center"
+        android:layout_height="850dp"
+        android:background="@drawable/background">
 
-        <EditText
-            android:id="@+id/etItemServerSettings"
+        <TextView
+            android:id="@+id/textView2"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="10dp"
-            tools:layout_editor_absoluteY="347dp" />
+            android:padding="50dp"
+            android:text="@string/settings_title"
+            android:textColor="@color/dark_blue"
+            android:textSize="80sp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
 
-        <Button
-            android:id="@+id/btnSaveSettings"
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="save"
-            android:background="@drawable/button"
-            android:layout_gravity="center_horizontal"/>
 
     </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
