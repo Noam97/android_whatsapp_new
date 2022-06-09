@@ -28,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:padding="50dp"
                 android:text="@string/login_title"
-                android:textColor="@color/dark_green"
+                android:textColor="@color/dark_blue"
                 android:textSize="34sp"
                 />
 
