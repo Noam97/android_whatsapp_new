@@ -13,5 +13,6 @@
     <string name="register_etDisplayName">Display Name</string>
     <string name="register_loginLink">Allready registered? click here to login</string>
     <string name="register_btnRegister">Register</string>
+    <string name="settings_title">Settings</string>
 
 </resources>

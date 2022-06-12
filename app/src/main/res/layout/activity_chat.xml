@@ -54,19 +54,17 @@
             </androidx.cardview.widget.CardView>
 
 
-
-
             <TextView
+                android:id="@+id/user_name_chat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="User Name"
-                android:textSize="20sp"
-                android:layout_toRightOf="@id/profile_user_in_chat"
-                android:id="@+id/user_name_chat"
-                android:layout_marginLeft="10dp"
                 android:layout_centerVertical="true"
-                android:textStyle="bold"
-                android:textColor="@color/dark_blue">
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/profile_user_in_chat"
+                android:text="User Name"
+                android:textColor="@color/dark_blue"
+                android:textSize="20sp"
+                android:textStyle="bold">
 
             </TextView>
 
