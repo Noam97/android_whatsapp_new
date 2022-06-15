@@ -52,7 +52,7 @@ public class chat extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
         sender_uid=firebaseAuth.getUid();
-        reciver_uid=firebaseAuth.getUid();
+        reciver_uid=
 
         sender_room=sender_uid+reciver_uid;
         reciver_room=reciver_uid+sender_uid;

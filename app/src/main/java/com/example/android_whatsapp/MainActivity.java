@@ -14,6 +14,8 @@ import com.example.android_whatsapp.API.UsersAPI;
 import com.example.android_whatsapp.API.WebServiceApi;
 import com.example.android_whatsapp.DataModels.LoginUser;
 import com.example.android_whatsapp.databinding.ActivityMainBinding;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -116,4 +118,9 @@ public class MainActivity extends AppCompatActivity {
         super.onRestart();
         Log.i("mainActivity","onRestart");
     }
+
+
+//    FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(MainActivity.this, newOnSucccessListener<InstanceIdResult>()){
+//        String newToken = instanceIdResult.getToken();
+//    }
 }
