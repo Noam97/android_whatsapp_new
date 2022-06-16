@@ -76,15 +76,21 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerviewofspecific"
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/messages_this_chat"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_above="@id/getmessage"-->
+<!--        android:layout_below="@id/toolsbar_chat"-->
+<!--        android:padding="5dp">-->
+
+<!--    </androidx.recyclerview.widget.RecyclerView>-->
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/getmessage"
-        android:layout_below="@id/toolsbar_chat"
-        android:padding="5dp">
+        android:id="@+id/list_messages"></LinearLayout>
 
-    </androidx.recyclerview.widget.RecyclerView>
 
     <EditText
         android:layout_width="match_parent"
@@ -124,7 +130,8 @@
             android:id="@+id/buttn_send_message"
             android:layout_gravity="center"
             android:scaleType="centerCrop"
-            app:tint="@color/white">
+            app:tint="@color/white"
+            android:onClick="create_message">
 
         </ImageButton>
 

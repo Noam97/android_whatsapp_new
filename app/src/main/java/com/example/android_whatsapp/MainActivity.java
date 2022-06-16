@@ -69,10 +69,12 @@ public class MainActivity extends AppCompatActivity {
                     i.putExtra("jwtToken", response.body());
                     i.putExtra("userId", userName.toString());
                     startActivity(i);
+                    Contact.setId(userName);
                     Log.i("mainActivity", "");
                 }
                 else {
-                    //
+                    //error message
+
                 }
             }
             @Override

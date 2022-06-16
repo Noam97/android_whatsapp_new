@@ -2,23 +2,35 @@ package com.example.android_whatsapp;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
+
+import java.util.ArrayList;
+
 @Entity
-public class Contact {
+ public class Contact {
     @PrimaryKey(autoGenerate=true)
     private int ContactId;
-    private String id;
+    private static String id;
     private String name;
     private String contact;
     private String server;
     private String last;
     private String lastDate;
+    private static ArrayList<chat_object> chats;
 
-    public String getId() {
+    public static ArrayList<chat_object> getChats() {
+        return chats;
+    }
+
+    public void setChats(ArrayList<chat_object> chats) {
+        this.chats = chats;
+    }
+
+    public  static String getId() {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public static void  setId(String _id) {
+        id = _id;
     }
 
     public void setContactId(int contactId) {

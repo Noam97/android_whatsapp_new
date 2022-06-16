@@ -5,18 +5,25 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Message;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
+import org.w3c.dom.Text;
+
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 
 public class chat extends AppCompatActivity {
@@ -31,9 +38,11 @@ public class chat extends AppCompatActivity {
 
     String reciver_name, sender_name, reciver_uid, sender_uid;
     String sender_room, reciver_room;
-
+    ArrayList<messages> l_messages;
     Intent intent;
     private FirebaseAuth firebaseAuth;
+
+    private chat_object this_chat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,11 +61,12 @@ public class chat extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
         sender_uid=firebaseAuth.getUid();
-        reciver_uid=
+      //  reciver_uid=
 
         sender_room=sender_uid+reciver_uid;
         reciver_room=reciver_uid+sender_uid;
         name_of_user.setText(reciver_name);
+        init_messages();
 
 //        send_message_button.setOnClickListener(view ->{
 //            @Override
@@ -70,5 +80,34 @@ public class chat extends AppCompatActivity {
 //                }
 //            }
 //        });
+    }
+
+    private void init_messages() {
+        LinearLayout ll = findViewById(R.id.list_messages);
+        ll.removeAllViews();
+        ScrollView sv = new ScrollView(this);
+        ll.setOrientation(LinearLayout.VERTICAL);
+        ll.addView(sv);
+        for (int i = 0; i < this_chat.messages.size(); i++) {
+            TextView cb = new CheckBox(getApplicationContext());
+            String text_message = this_chat.messages.get(i).getMessage();
+            cb.setText(text_message);
+            ll.addView(cb);
+        }
+    }
+
+        public void create_message(View v){
+        String message =  get_message.getText().toString();
+        if(message.isEmpty()){
+            return;
+        }
+        String sender_id = Contact.getId();
+
+        messages m = new messages(message,sender_id);
+        this_chat.messages.add(m);
+        //clear edit text
+        get_message.setText("");
+        init_messages();
+
     }
 }
