@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:padding="50dp"
                 android:text="@string/register_title"
-                android:textColor="@color/dark_green"
+                android:textColor="@color/dark_blue"
                 android:textSize="34sp" />
             <ImageView
                 android:id="@+id/imageView4"
@@ -38,6 +38,7 @@
                 android:id="@+id/editTextTextPersonName"
                 android:layout_width="360dp"
                 android:layout_height="50dp"
+                android:textColor="@color/dark_blue"
                 android:ems="10"
                 android:hint="@string/register_etUsername"
                 android:inputType="textPersonName"
@@ -49,6 +50,7 @@
                 android:layout_height="50dp"
                 android:ems="10"
                 android:hint="@string/register_etPassword"
+                android:textColor="@color/dark_blue"
                 android:inputType="textPassword"
                 android:padding="5dp"
                 />
@@ -60,6 +62,8 @@
                 android:ems="10"
                 android:hint="@string/register_etSecondPassword"
                 android:inputType="textPassword"
+                android:textColor="@color/dark_blue"
+
                 android:padding="5dp"
                 />
 
@@ -78,6 +82,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/register_loginLink"
+                android:textColor="@color/dark_blue"
+
                 android:padding="15pt"/>
 
             <Button

@@ -13,7 +13,8 @@
         android:layout_margin="10dp"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="405dp">
+        tools:layout_editor_absoluteY="405dp"
+        tools:ignore="MissingConstraints">
 
         <Button
             android:id="@+id/btnSaveNewContact"
@@ -21,6 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="save new Contact"
+            android:background="@drawable/button"
             android:layout_gravity="center_horizontal"/>
 
         <EditText
