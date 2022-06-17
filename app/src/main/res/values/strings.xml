@@ -11,7 +11,7 @@
     <string name="login_etSecondPassword">Confirm Password</string>
     <string name="register_etSecondPassword">Confirm Password</string>
     <string name="register_etDisplayName">Display Name</string>
-    <string name="register_loginLink">Allready registered? click here to login</string>
+    <string name="register_loginLink">Already registered? click here to login</string>
     <string name="register_btnRegister">Register</string>
     <string name="server">10.0.2.2:5116</string>
     <string name="title_activity_settings">SettingsActivity</string>
