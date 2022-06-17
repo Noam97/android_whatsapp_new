@@ -75,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
                     i.putExtra("jwtToken", response.body());
                     i.putExtra("userId", userName.toString());
+                    i.putExtra("isNewUser", true);
                     startActivity(i);
                     Log.i("mainActivity", "");
                 }

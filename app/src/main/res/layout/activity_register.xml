@@ -56,6 +56,7 @@
                 />
 
             <EditText
+                android:id="@+id/editConfirmPass"
                 android:layout_width="360dp"
                 android:layout_height="50dp"
                 android:ems="10"
@@ -67,12 +68,12 @@
                 />
 
             <EditText
+                android:id="@+id/editDisplayName"
                 android:layout_width="360dp"
                 android:layout_height="50dp"
                 android:ems="10"
                 android:hint="@string/register_etDisplayName"
-                android:textColor="@color/dark_blue"
-
+                android:inputType="textPersonName"
                 android:padding="5dp"
                 />
 
@@ -94,6 +95,16 @@
                 tools:layout_editor_absoluteX="1dp"
                 tools:layout_editor_absoluteY="1dp"
                 android:background="@drawable/button"
+                />
+            <EditText
+                android:id="@+id/registerError"
+                android:layout_width="360dp"
+                android:layout_height="50dp"
+                android:ems="10"
+                android:background="@android:color/transparent"
+                android:hint=""
+                android:inputType="textPersonName"
+                android:padding="5dp"
                 />
         </LinearLayout>
 

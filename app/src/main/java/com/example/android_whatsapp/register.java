@@ -6,7 +6,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+
+import com.example.android_whatsapp.API.UsersAPI;
+import com.example.android_whatsapp.API.WebServiceApi;
+import com.example.android_whatsapp.DataModels.LoginUser;
+import com.example.android_whatsapp.DataModels.RegisterUser;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class register extends AppCompatActivity {
 
@@ -22,48 +32,73 @@ public class register extends AppCompatActivity {
             Log.i("register_activity","");
         });
 
-        Button btn_login = findViewById(R.id.btn_register);
-        btn_login.setOnClickListener(v -> {
-            Intent i = new Intent(this, register.class);
-            startActivity(i);
-            Log.i("register_activity","");
+        UsersAPI api = new UsersAPI(this);
+
+        Button btn_register = findViewById(R.id.btn_register);
+        btn_register.setOnClickListener(v -> {
+
+        EditText userName = findViewById(R.id.editTextTextPersonName);
+        EditText displayName = findViewById(R.id.editDisplayName);
+        EditText password1 = findViewById(R.id.editTextTextPassword);
+        EditText password2 = findViewById(R.id.editConfirmPass);
+        EditText registerError = findViewById(R.id.registerError);
+
+
+        // fields are not empty
+            if(userName.getText().toString().equals("") ||
+                displayName.getText().toString().equals("") ||
+                password1.getText().toString().equals("") ||
+                password2.getText().toString().equals("")) {
+                registerError.setText("Fields cannot be empty");
+                return;
+            }
+        // passwords are valid
+            if(!password1.getText().toString().equals(password2.getText().toString())) {
+                registerError.setText("Passwords are not identical");
+                return;
+            }
+        registerError.setText("");
+        Intent i = new Intent(this, contacts_list.class);
+        register(i,
+                api,
+                userName.getText().toString(),
+                displayName.getText().toString(),
+                password1.getText().toString());
         });
 
         Log.i("register_activity","");
     }
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Log.i("register_activity","onStart");
+
+    public void register(Intent i, UsersAPI usersAPI, String userName, String displayName, String password) {
+        WebServiceApi api = usersAPI.getApi();
+        RegisterUser user = new RegisterUser(userName, displayName, password);
+        Call<String> call = api.createUser(user);
+        call.enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(Call<String> call, Response<String> response) {
+                System.out.println(response.body());
+                if(response.isSuccessful()) {
+
+                    i.putExtra("jwtToken", response.body());
+                    i.putExtra("userId", userName.toString());
+                    i.putExtra("isNewUser", true);
+                    startActivity(i);
+                    Log.i("mainActivity", "");
+                }
+                else {
+                    //
+                }
+            }
+            @Override
+            public void onFailure(Call<String> call, Throwable t) {
+                EditText registerError = findViewById(R.id.registerError);
+                registerError.setText("User id already exists");
+                System.out.println("ERORRRRRRR");
+                System.out.println(t.toString());
+            }
+
+        });
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Log.i("register_activity","onResume");
-    }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Log.i("register_activity","onPause");
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Log.i("register_activity","onStop");
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Log.i("register_activity","onDestroy");
-    }
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        Log.i("register_activity","onRestart");
-    }
 }
